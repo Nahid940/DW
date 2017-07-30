@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucy's Pet</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+<!--
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+-->
+     <script language="javascript">
+        var flag=0;
+          
+        function name()
+        {
+            pass=signupform.name.value;
+            if(pass=="")
+            {
+                document.getElementById("error0").innerHTML="Enter your name";   
+                flag=1;
+            }
+        }
+         
+          function email()
+        {
+            emailcheck=signupform.email.value;
+            if( emailcheck=="")
+            {
+                document.getElementById("error1").innerHTML="Enter valid email";
+                flag=1;
+            }
+        }
+         
+        function checkaddress(){
+            addresscheck=signupform.address.value;
+            if(addresscheck==""){
+                document.getElementById("error2").innerHTML="Enter your address";
+                flag=1;
+            }
+        }
+         
+          function postcode(){
+            postcodecheck=signupform.postcode.value;
+            if(postcodecheck==""){
+                document.getElementById("error3").innerHTML="Enter your post code";
+                flag=1;
+            }
+        }
+         
+           function contact(){
+            contactcheck=signupform.contact.value;
+            if(contactcheck==""){
+                document.getElementById("error4").innerHTML="Enter your contact No.";
+                flag=1;
+            }
+        } 
+        function password(){
+            passwordcheck=signupform.password.value;
+            if(passwordcheck==""){
+                document.getElementById("error5").innerHTML="Enter password.";
+                flag=1;
+            }else if(passwordcheck.length<5){
+                document.getElementById("error5").innerHTML="Password must be 5 character long";
+                flag=1;
+            }
+        } 
+         function ccpassword(){
+            passwordcheck=signupform.cpassword.value;
+            if(passwordcheck==""){
+                document.getElementById("error6").innerHTML="Re enter password.";
+                flag=1;
+            }
+        }
+         
+           function cccpassword(){
+            passwordcheck1=signupform.password.value;
+            passwordcheck2=signupform.cpassword.value;
+            if(passwordcheck1 != passwordcheck2){
+                document.getElementById("error7").innerHTML="Password doesn't match!!.";
+                flag=1;
+            }
+        }
+         
+         
+
+        function check(form)
+        {
+            flag=0;
+            
+            name();
+            email();
+            checkaddress();
+            postcode();
+            contact();
+            password();
+            ccpassword();
+            cccpassword();
+            if(flag==1)
+                return false;
+            else
+                return true;
+        }
+
+    </script>
+
+    <style>
+       
+        .image{
+            width: 20%;
+            float: left;
+        }
+        .image image{
+            height: 50px;  
+        }
+       
+        
+       
+        .top,.bottom{
+            height: 200px;
+            width: 100%;
+            background-color: #79B849;
+            height: 30px;
+            overflow: hidden
+        }
+        
+        
+           
+            #signup{
+                width: 30%;
+                height: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                color: aliceblue;
+                margin-left: 26%;
+                background-color: darkolivegreen 
+            }
+           
+        .regform table{
+            width: 100%
+        }
+       
+         #error2,#error3,#error4,#error5,#error6,#error7{
+            color: red
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+        <div class="mainmenu">
+           <div class="right">
+              
+               <ul>
+                 <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="servicedetails.php">Service packages</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+           </div>
+            
+        </div>
+        <div class="body">
+        
+        <div class="top">
+            
+        </div>
+        
+        <div class="image">
+            <img src="image/transparent-background-dog.png" alt="">
+        </div>
+        <div class="setrequirements">
+        
+        <div class="regform">
+        <form  name='signupform' action="reg.php" method="post" onSubmit="return check(this)">
+		<table cellpadding="5px">
+		<tr>
+            <td>Name :</td>
+            <td>
+            <div id="error0"></div>
+             <input type="text" name="name" placeholder="Your name"/></td>
+			</tr><tr>
+				<td>Email :</td><td> 
+				<div id="error1"></div>
+				<input type="email" name="email" placeholder="email"/></td>
+			</tr>
+			<tr>
+				<td>Address :</td><td>
+				<div id="error2"></div>
+				 <input type="text" name="address" placeholder="eg. 25 Baker St,UK"/></td>
+			</tr>
+			<tr>
+				<td>Post code :</td><td>
+				<div id="error3"></div>
+				<input type="text" name="postcode" placeholder="eg. WC1A 1BL, WC1A 1AP, CA1 1AA"/></td>
+			</tr>
+			<tr>
+				<td>Contact :</td><td> 
+				<div id="error4"></div>
+				<input type="text" name="contact" placeholder="Contact No."/></td>
+			</tr>
+			<tr>
+				<td>Password :</td><td> 
+				<div id="error5"></div>
+				<input type="password" name="password" placeholder='Password'/></td>
+			</tr>
+			<tr>
+			    
+			    
+				<td>Confirm Password :</td><td> 
+				<div id="error6"></div>
+				<div id="error7"></div>
+				<input type="password" name="cpassword" placeholder='Confirm password'/></td>
+<!--				-->
+			</tr>			
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="Register" name="register" id='signup'/>
+				</td>
+			
+			</tr>
+		</table>
+		</form>
+        </div>
+        
+       
+          
+        </div>
+       
+       
+  
+        <div class="bottom">
+           
+        </div>
+        </div>
+  
+        
+    </div>
+</body>
+</html>
+

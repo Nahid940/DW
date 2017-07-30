@@ -1,0 +1,148 @@
+body{margin: 0 auto;padding: 0}
+.main{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+.mainmenu{
+    overflow: hidden
+}
+.mainmenu .right ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:cadetblue;
+}
+
+
+.mainmenu  .right li {
+    float: left;
+}
+
+
+.mainmenu li .active{
+    background-color: black
+}
+
+.mainmenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mainmenu li a:hover {
+    background-color:azure;
+    color: black;
+    
+}
+input,#select{
+    width: 98%;
+    height: 26px
+}
+select{
+    width: 100%
+}
+
+.body{
+    
+    margin: auto;
+    height: auto;
+    text-align: center;overflow: hidden
+}
+.setrequirements{
+    width: 100%;
+    
+}
+.setrequirements form{
+    width: 50%;
+    float: left;
+}
+.orderlist{
+    width: 40%;
+    border:1px solid black 
+}
+.orderlist table{
+   width: 100%;
+    text-align: center;
+}
+
+.setrequirements .packagelist{
+    float: right;
+    width: 40%;
+    margin-right: 1%;
+}
+
+.packagelist table{
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px; 
+}
+.packagelist table th{
+    color: green;
+    padding: 10px
+}
+.bookpackage{
+    background-color:dodgerblue;
+    margin-top: 5px;
+    color: white;
+    cursor: pointer
+}
+
+.form{
+    width: 100%;
+     border-top: dotted 1px black;
+    overflow: hidden;
+}
+.form table{
+    width: 70%;
+   margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+	padding:10px
+}
+.form .book{
+    width: 15%;
+    height: 40px;
+    background-color: darkslategrey;
+    color: aliceblue;
+    cursor: pointer;
+    margin-top: 20px;
+	font-weight:bold
+    
+}
+#book1{
+	float:right;
+	margin-right:20%;
+	margin-bottom:5px
+}
+
+#error0,#error1{
+    color: red
+}
+
+
+
+#signup{
+    width: 30%;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    color: aliceblue;
+    margin-left: 26%;
+    background-color: darkolivegreen 
+}
+
+.regform table{
+width: 100%
+}
+
+    .editorderform{
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px
+        }
